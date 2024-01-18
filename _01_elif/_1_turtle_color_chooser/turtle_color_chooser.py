@@ -25,5 +25,25 @@ if __name__ == '__main__':
     #      7) Put a loop around your code so that you keep asking the user for
     #         more colors & drawing them
 
+    hi = turtle.Turtle()
+
+
+
+
+
+
+
+    hi.pensize(10)
+
+    for i in range(4):
+        hi.forward(100)
+        hi.right(90)
+
+
+
+
+
+
+
     # ===================== DO NOT EDIT THE CODE BELOW ============================
     turtle.done()
