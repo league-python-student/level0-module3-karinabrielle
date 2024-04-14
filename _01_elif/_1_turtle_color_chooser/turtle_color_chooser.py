@@ -1,6 +1,6 @@
 import random
 import turtle
-from tkinter import simpledialog
+from tkinter import simpledialog, messagebox
 
 
 # Returns a random color!
@@ -27,10 +27,78 @@ if __name__ == '__main__':
 
     hi = turtle.Turtle()
 
+    color = simpledialog.askstring(title="", prompt='What color of a pen would you like to use? \n '
+                            'Type the color you would like to use in this box')
 
+    if color == "red" :
+        hi.pencolor("red")
+        hi.color("red")
+    elif color == "orange" :
+        hi.pencolor("orange")
+        hi.color("orange")
+    elif color == "yellow" :
+        hi.pencolor("yellow")
+        hi.color("yellow")
+    elif color == "green" :
+        hi.pencolor("green")
+        hi.color("green")
+    elif color == "blue" :
+        hi.pencolor("blue")
+        hi.color("blue")
+    elif color == "purple" :
+        hi.pencolor("purple")
+        hi.color("purple")
+    elif color == "pink" :
+        hi.pencolor("pink")
+        hi.color("pink")
+    elif color == "brown" :
+        hi.pencolor("brown")
+        hi.color("brown")
+    elif color == "black" :
+        hi.pencolor("black")
+        hi.color("black")
+    elif color == "gray" :
+        hi.pencolor("gray")
+        hi.color("gray")
+    elif color == "" :
+        messagebox.showinfo(message="Wow! I-I think the pro- beep! Is br- beep! beep! x_x")
 
+    else:
+        simpledialog.askstring(title='', prompt='Since we cannot do that color, then we will kindly ask you to pick a different color. :)')
 
-
+        if color == "red":
+            hi.pencolor("red")
+            hi.color("red")
+        elif color == "orange":
+            hi.pencolor("orange")
+            hi.color("orange")
+        elif color == "yellow":
+            hi.pencolor("yellow")
+            hi.color("yellow")
+        elif color == "green":
+            hi.pencolor("green")
+            hi.color("green")
+        elif color == "blue":
+            hi.pencolor("blue")
+            hi.color("blue")
+        elif color == "purple":
+            hi.pencolor("purple")
+            hi.color("purple")
+        elif color == "pink":
+            hi.pencolor("pink")
+            hi.color("pink")
+        elif color == "brown":
+            hi.pencolor("brown")
+            hi.color("brown")
+        elif color == "black":
+            hi.pencolor("black")
+            hi.color("black")
+        elif color == "gray":
+            hi.pencolor("gray")
+            hi.color("gray")
+        elif color == "":
+            hi.pencolor("")
+            hi.color("")
 
 
     hi.pensize(10)
