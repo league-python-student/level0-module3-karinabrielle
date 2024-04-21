@@ -1,5 +1,6 @@
 import random
 import turtle
+import sys
 from tkinter import simpledialog, messagebox
 
 
@@ -27,85 +28,94 @@ if __name__ == '__main__':
 
     hi = turtle.Turtle()
 
-    color = simpledialog.askstring(title="", prompt='What color of a pen would you like to use? \n '
-                            'Type the color you would like to use in this box')
+    messagebox.showinfo(message='In this program you will be able to make a square in any spot'
+                                'with a color of your choice. Type "exit" to leave the program. ')
 
-    if color == "red" :
-        hi.pencolor("red")
-        hi.color("red")
-    elif color == "orange" :
-        hi.pencolor("orange")
-        hi.color("orange")
-    elif color == "yellow" :
-        hi.pencolor("yellow")
-        hi.color("yellow")
-    elif color == "green" :
-        hi.pencolor("green")
-        hi.color("green")
-    elif color == "blue" :
-        hi.pencolor("blue")
-        hi.color("blue")
-    elif color == "purple" :
-        hi.pencolor("purple")
-        hi.color("purple")
-    elif color == "pink" :
-        hi.pencolor("pink")
-        hi.color("pink")
-    elif color == "brown" :
-        hi.pencolor("brown")
-        hi.color("brown")
-    elif color == "black" :
-        hi.pencolor("black")
-        hi.color("black")
-    elif color == "gray" :
-        hi.pencolor("gray")
-        hi.color("gray")
-    elif color == "" :
-        messagebox.showinfo(message="Wow! I-I think the pro- beep! Is br- beep! beep! x_x")
+    for i in range(9999999):
+        color = simpledialog.askstring(title="", prompt='What color of a pen would you like to use? \n '
+        'Type the color you would like to use in this box')
 
-    else:
-        simpledialog.askstring(title='', prompt='Since we cannot do that color, then we will kindly ask you to pick a different color. :)')
-
-        if color == "red":
+        if color == "red" :
             hi.pencolor("red")
             hi.color("red")
-        elif color == "orange":
+        elif color == "orange" :
             hi.pencolor("orange")
             hi.color("orange")
-        elif color == "yellow":
+        elif color == "yellow" :
             hi.pencolor("yellow")
             hi.color("yellow")
-        elif color == "green":
+        elif color == "green" :
             hi.pencolor("green")
             hi.color("green")
-        elif color == "blue":
+        elif color == "blue" :
             hi.pencolor("blue")
             hi.color("blue")
-        elif color == "purple":
+        elif color == "purple" :
             hi.pencolor("purple")
             hi.color("purple")
-        elif color == "pink":
+        elif color == "pink" :
             hi.pencolor("pink")
             hi.color("pink")
-        elif color == "brown":
+        elif color == "brown" :
             hi.pencolor("brown")
             hi.color("brown")
-        elif color == "black":
+        elif color == "black" :
             hi.pencolor("black")
             hi.color("black")
-        elif color == "gray":
+        elif color == "gray" :
             hi.pencolor("gray")
             hi.color("gray")
-        elif color == "":
-            hi.pencolor("")
-            hi.color("")
+        elif color == "" :
+            messagebox.showinfo(message="Wow! I-I think the pro- beep! Is br- beep! beep! x_x")
+            sys.exit(0)
+        elif color == "exit" :
+            sys.exit(0)
+        else:
+            color2 = simpledialog.askstring(title='', prompt='Since we cannot do that color, then we will kindly ask you to pick a different color. :)')
+            if color2 == "red":
+                hi.pencolor("red")
+                hi.color("red")
+            elif color2 == "orange":
+                hi.pencolor("orange")
+                hi.color("orange")
+            elif color2 == "yellow":
+                hi.pencolor("yellow")
+                hi.color("yellow")
+            elif color2 == "green":
+                hi.pencolor("green")
+                hi.color("green")
+            elif color2 == "blue":
+                hi.pencolor("blue")
+                hi.color("blue")
+            elif color2 == "purple":
+                hi.pencolor("purple")
+                hi.color("purple")
+            elif color2 == "pink":
+                hi.pencolor("pink")
+                hi.color("pink")
+            elif color2 == "brown":
+                hi.pencolor("brown")
+                hi.color("brown")
+            elif color2 == "black":
+                hi.pencolor("black")
+                hi.color("black")
+            elif color2 == "gray":
+                hi.pencolor("gray")
+                hi.color("gray")
+            elif color2 == "":
+                messagebox.showinfo(message="Wow! I-I think the pro- beep! Is br- beep! beep! x_x")
+                sys.exit(0)
+            elif color == "exit":
+                sys.exit(0)
 
+        hi.pensize(10)
 
-    hi.pensize(10)
-
-    for i in range(4):
-        hi.forward(100)
-        hi.right(90)
+        hi.penup()
+        hi.setposition(random.randint(-450, 450),random.randint(-450, 450))
+        hi.pendown()
+        for i in range(4):
+            hi.forward(100)
+            hi.right(90)
 
 
 

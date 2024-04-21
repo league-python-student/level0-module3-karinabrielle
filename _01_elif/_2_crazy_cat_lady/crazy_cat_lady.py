@@ -20,3 +20,35 @@ if __name__ == '__main__':
     #         Bench Like a Human
 
     pass
+
+    window = Tk()
+
+    window.withdraw()
+
+    name = simpledialog.askstring(title="", prompt="Hello! We would like to know more about you, so can "
+                                             "you tell us your name?")
+    cats = simpledialog.askstring(title="", prompt="That's a cool name, "+ name +". Now, HOW MANY CATS DO "
+                                
+                                
+                                                                          "YOU HAVE?!?!?!????????!")
+    if int(cats) > 3:
+        messagebox.showinfo(message ="Man, you really are one of those crazy cat "
+                               "ladies!")
+
+    play_video("https://www.youtube.com/watch?v=47msKc3abqo")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
