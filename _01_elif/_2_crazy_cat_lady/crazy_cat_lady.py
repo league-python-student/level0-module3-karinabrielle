@@ -32,13 +32,22 @@ if __name__ == '__main__':
                                 
                                                                           "YOU HAVE?!?!?!????????!")
     if int(cats) > 3:
-        messagebox.showinfo(message ="Man, you really are one of those crazy cat "
+
+        messagebox.showinfo(message ="Sorry, I'm just really obsessed with cats.")
+        messagebox.showinfo(message ="But man, you really are one of those crazy cat "
                                "ladies!")
 
-    play_video("https://www.youtube.com/watch?v=47msKc3abqo")
+        play_video("https://www.youtube.com/watch?v=47msKc3abqo")
 
+    elif int(cats) > 0 and int(cats) < 3:
+        messagebox.showinfo(message="Wow nice! Oh, and sorry for yelling at ya like that, I'M JUST REALLY OBSESSED WITH CATS!!!")
 
+        play_video("https://www.youtube.com/shorts/Po098TRdOn4")
 
+    else:
+        messagebox.showinfo(message="...")
+
+        play_video("https://www.youtube.com/watch?v=VLVdjLbXdm4")
 
 
 
