@@ -9,42 +9,46 @@ window = Tk()
 window.withdraw()
 if __name__ == '__main__':
 
-    simpledialog.askstring(title="", prompt="Hello, today we will be creating a story together, so lets get started!!!")
+    simpledialog.askstring(title="", prompt="""Hello, today we will be creating a story together, so lets get started!!!""")
     character = simpledialog.askstring(title="", prompt="Who would you like your main character to"
-    " be? Your choices are a wild wolf, a"
-    " wild fox, a stray dog, or a"
-    " stray cat! Sorry, there"
-    " aren't any more choices. If you want to"
-    " choose a main character, then you will"
-    " have to say 'a stray cat' instead of '"
-    "stray cat'.")
+    " be? Write down the number you want to choose. \n 1. A wild wolf \n 2. A"
+    " wild fox \n 3. A stray dog \n 4. A"
+    " stray cat")
 
-    if character == "a wild wolf":
-        messagebox.showinfo(message="OK, cool, cool.")
-    elif character == "a wild fox":
-        messagebox.showinfo(message="Nice.")
-    elif character == "a stray cat":
-        messagebox.showinfo(message="Awesome.")
-    elif character == "a stray dog":
-        messagebox.showinfo(message="Awesome.")
+    choiceone = ["0", "1", "2", "3", "4"]
+
+    choice1 = choiceone.index(character)
+
+    if choice1 == 1:
+        messagebox.showinfo(message="Awesome choice!")
+    elif choice1 == 2:
+        messagebox.showinfo(message="Awesome choice!")
+    elif choice1 == 3:
+        messagebox.showinfo(message="Awesome choice!")
+    elif choice1 == 4:
+        messagebox.showinfo(message="Awesome choice!")
     else:
-        messagebox.showinfo(message="It has to be a stray cat, a stray dog, a wild wolf,"
-                                        " or a wild fox. Since you did not choose any of the "
-                                        "characters, we will choose one for you.")
+        messagebox.showinfo(message="The choices were 1, 2, 3, or 4, but since you did not choose any of the "
+                                        "choices, we will choose one for you.")
 
         mcharacter_choices = ["a wild fox", "a wild wolf", "a stray cat", "a stray dog"]
         character = random.choice(mcharacter_choices)
 
-        messagebox.showinfo(message = "Your main character is " + character + "!")
+        messagebox.showinfo(message="Your main character is " + character + "!")
 
     character_name = simpledialog.askstring(title="", prompt="What will be your main character"
-                                                "'s name? Some names are "
+                                                "'s name? For inspiration, some names are "
                                                 "Snoopy, Olive, Checkers, Luna,"
-                                                " Aspen, or Autumn")
+                                                " Aspen, or Autumn, but you can create your own name for your character"
+                                                             "if you want to.")
 
-    simpledialog.askstring(title="", prompt="Alright, what will " + character_name + "be doing"
-    "at the time? The choices are that " + character_name + "will be walking in a forest,")
-
+    what = simpledialog.askstring(title="", prompt="Alright, what will " + character_name + " "
+    "be doing at the time? The choices are that " + character_name + " will be walking in a forest, " + character_name + " will be walking on the street, " +
+                           character_name + "will be eating some food they found, or " + character_name + "will be laying down on the sidewalk staring at all the"
+                           "pets playing with their owners.")
+    messagebox.showinfo(message="Alright, let's move on!")
+    simpledialog.askstring(title="", prompt='What will your main character do next? Will ' + character_name + 'see a fish that looks delicious? '
+                        '')
 
 
 
