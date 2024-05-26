@@ -10,8 +10,11 @@ window.withdraw()
 if __name__ == '__main__':
 
     simpledialog.askstring(title="", prompt="""Hello, today we will be creating a story together, so lets get started!!!""")
+
+    # =====================================================MAIN CHARACTER======================================================
+
     character = simpledialog.askstring(title="", prompt="Who would you like your main character to"
-    " be? Write down the number you want to choose. \n 1. A wild wolf \n 2. A"
+    " be? Write down the number you want to choose... \n 1. A wild wolf \n 2. A"
     " wild fox \n 3. A stray dog \n 4. A"
     " stray cat")
 
@@ -27,8 +30,8 @@ if __name__ == '__main__':
         messagebox.showinfo(message="Awesome choice!")
     elif choice1 == 4:
         messagebox.showinfo(message="Awesome choice!")
-    else:
-        messagebox.showinfo(message="The choices were 1, 2, 3, or 4, but since you did not choose any of the "
+    elif choice1 > 0:
+        messagebox.showinfo(message="The choices were 1, 2, 3, or 4, but since you did not choose any of the"
                                         "choices, we will choose one for you.")
 
         mcharacter_choices = ["a wild fox", "a wild wolf", "a stray cat", "a stray dog"]
@@ -36,23 +39,44 @@ if __name__ == '__main__':
 
         messagebox.showinfo(message="Your main character is " + character + "!")
 
+    # ---------------------------------------------------NAME OF CHARACTER------------------------------------------------
+
     character_name = simpledialog.askstring(title="", prompt="What will be your main character"
                                                 "'s name? For inspiration, some names are "
                                                 "Snoopy, Olive, Checkers, Luna,"
-                                                " Aspen, or Autumn, but you can create your own name for your character"
+                                                " or Autumn, but you can create your own name for your character"
                                                              "if you want to.")
+    # -------------------------------------------LOCATION OF CHARACTER--------------------------------------------------------
+    setting = simpledialog.askstring(title="", prompt="Where is " + character_name + " located? Write down the number you want to choose... \n 1. In a forest \n 2."
+                                                                                         " On the streets \n 3. In a desert \n 4. We will choose for you")
 
-    what = simpledialog.askstring(title="", prompt="Alright, what will " + character_name + " "
-    "be doing at the time? The choices are that " + character_name + " will be walking in a forest, " + character_name + " will be walking on the street, " +
-                           character_name + "will be eating some food they found, or " + character_name + "will be laying down on the sidewalk staring at all the"
-                           "pets playing with their owners.")
-    messagebox.showinfo(message="Alright, let's move on!")
-    simpledialog.askstring(title="", prompt='What will your main character do next? Will ' + character_name + 'see a fish that looks delicious? '
-                        '')
+    choicetwo = ["0", "1", "2", "3", "4"]
 
+    choice2 = choicetwo.index(setting)
 
+    if choice2 == 1:
+        messagebox.showinfo(message="Awesome choice!")
+    elif choice2 == 2:
+        messagebox.showinfo(message="Awesome choice!")
+    elif choice2 == 3:
+        messagebox.showinfo(message="Awesome choice!")
+    elif choice2 == 4:
+        messagebox.showinfo(message="Alright, we will choose a setting for you...")
+        setting_choices = ["in a forest", "on the streets", "in a desert"]
+        setting = random.choice(setting_choices)
 
+        messagebox.showinfo(message="Your character is located " + setting + "!")
 
+    elif choice2 > 0:
+        messagebox.showinfo(message="The choices were 1, 2, 3, or 4, but since you did not choose any of the"
+                                            "choices, so we will choose a setting for you.")
+
+        setting_choices = ["in a forest, on the streets, in a desert"]
+        setting = random.choice(setting_choices)
+
+        messagebox.showinfo(message="Your character is located " + setting + "!")
+
+    # =============================================WHAT THE CHARACTER IS DOING============================================================
 
 
 
